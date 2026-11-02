@@ -1,0 +1,492 @@
+﻿name,name_ta,lat,lon,ward_no,ward_how
+Alwarpet,ஆழ்வார்பேட்டை,13.0338602,80.2545491,123,inside
+Teynampet,தேனாம்பேட்டை,13.0443237,80.2498455,118,inside
+Gopalapuram,கோபாலபுரம்,13.0497324,80.2582028,118,inside
+Nandanam,நந்தனம்,13.0286286,80.240256,122,inside
+Raja Annamalai Puram,இராஜா அண்ணாமலைபுரம்,13.0244783,80.253937,123,inside
+Abhiramapuram,அபிராமபுரம்,13.0310236,80.2582995,123,inside
+CIT Colony,சி ஐ டி காலனி,13.04131,80.2604719,119,inside
+Porur,போரூர்,13.032458,80.1582861,153,inside
+Mylapore,மயிலாப்பூர்,13.0316473,80.2700166,124,inside
+Mandaveli,மந்தைவெளி,13.0258445,80.2627877,126,inside
+Mahalingapuram,,13.0567826,80.2364037,110,inside
+Nungambakkam,நுங்கம்பாக்கம்,13.0620626,80.240487,110,inside
+Kodambakkam,கோடம்பாக்கம்,13.049207,80.2242829,132,inside
+Ashok Nagar,அஷோக் நகர்,13.0359275,80.2145697,135,inside
+Saidapet,சைதாப்பேட்டை,13.020817,80.2239536,142,inside
+East Abhiramapuram,,13.0342682,80.2617914,123,inside
+Santhome,சாந்தோம்,13.0298372,80.275738,125,inside
+Royapettah,ராயப்பேட்டை,13.0554718,80.2639706,115,inside
+Triplicane,திருவல்லிக்கேணி,13.0604285,80.2750704,114,inside
+Thousand Lights,ஆயிரம் விளக்கு,13.0587829,80.2557114,111,inside
+Pudupet,,13.0712018,80.2669603,63,inside
+Egmore,எழும்பூர்,13.0728321,80.2576906,61,inside
+Island Grounds,தீவு மைதானம்,13.0742005,80.2793622,59,inside
+Chepauk,சேப்பாக்கம்,13.0645131,80.2831179,114,inside
+Chetpet,சேத்துப்பட்டு,13.0717448,80.2437973,108,inside
+MRC Nagar,,13.0196693,80.2706525,171,inside
+Saligramam,சாலிகிராமம்,13.0569892,80.2037301,129,inside
+Aminjikarai,அமைந்தக்கரை,13.0721399,80.2205453,107,inside
+Arumbakkam,அரும்பாக்கம்,13.074371,80.2081312,105,inside
+Anna Nagar,அண்ணா நகர்,13.088249,80.2073398,104,inside
+Padi,பாடி,13.1035851,80.1920425,88,inside
+Villivakkam,வில்லிவாக்கம்,13.104048,80.209044,95,inside
+ICF Colony,,13.0995307,80.2202379,96,inside
+Perambur,பெரம்பூர்,13.1121242,80.245022,71,inside
+Sowcarpet,சௌகார்பேட்டை,13.0884967,80.2783092,59,inside
+Vallalar Nagar,வள்ளலார் நகர்,13.1019255,80.2787773,54,inside
+Gandhinagar,காந்தி நகர்,13.0089932,80.2538632,173,inside
+Besant Nagar,பெசன்ட் நகர்,12.9996907,80.2682259,174,inside
+Adyar,அடையாறு,13.00645,80.2577791,174,inside
+Little Mount,சின்னமலை,13.0141864,80.2266882,169,inside
+Guindy,கிண்டி,13.0087095,80.2203646,172,inside
+Thiruvanmiyur,திருவான்மியூர்,12.9858948,80.2644215,179,inside
+Kotturpuram,கோட்டூர்புரம்,13.0193703,80.2435512,170,inside
+Kannammapet,கண்ணம்மாபேட்டை,13.0323256,80.2280783,141,inside
+CIT Nagar,,13.0293843,80.2342825,141,inside
+NSK Nagar,,13.0777508,80.2167134,103,inside
+Shenoy Nagar,ஷெனாய் நகர்,13.0786669,80.2272547,101,inside
+Kilpauk,கீழ்ப்பாக்கம்,13.0832149,80.2379864,100,inside
+George Town,முத்தியால்பேட்டை,13.0920917,80.2822426,57,inside
+Park Town,பூங்கா நகர,13.0865731,80.2723927,58,inside
+Royapuram,ராயபுரம்,13.1146195,80.2940279,50,inside
+Vyasarpadi,வியாசர்பாடி,13.1130472,80.258722,45,inside
+Basin Bridge,பேசின் பிரிட்ஜ்,13.1080471,80.2699078,46,inside
+Washermanpet,வண்ணாரப்பேட்டை,13.1136296,80.2814813,48,inside
+Mannady,மண்ணடி,13.0959441,80.2871013,60,inside
+West Saidapet,மேற்கு சைதாப்பேட்டை,13.0252576,80.2204237,140,inside
+Todhunter Nagar,,13.0226153,80.2308086,169,inside
+Jothiammal Nagar,,13.0195105,80.2288972,169,inside
+Sholinganallur,சோழிங்கநல்லூர்,12.8935356,80.2320634,199,inside
+Adambakkam,ஆதம்பாக்கம்,12.9822215,80.209121,176,inside
+Kasturibai Nagar,கஸ்தூரிபாய் நகர்,13.0040436,80.2509384,173,inside
+Indira Nagar,இந்திரா நகர்,12.9963154,80.2524199,173,inside
+Shastri Nagar,சாஸ்திரி நகர்,12.9987729,80.2599116,174,inside
+Kalakshetra Colony,,12.9936352,80.266422,179,inside
+Thoraipakkam,துறைப்பாக்கம்,12.9491762,80.2406875,193,inside
+Perungudi,பெருங்குடி,12.9710239,80.2418051,182,inside
+Nehru Nagar Industrial Estate,நேரு நகர் தொழிற்பேட்டை,12.9742161,80.2475423,182,inside
+Venus Colony,வீனஸ் காலனி,13.0401069,80.2549202,118,inside
+Seethammal Colony,,13.035012,80.2509783,122,inside
+Poes Garden,போயஸ் கார்டன்,13.0437065,80.253316,118,inside
+Anna Nagar East,அண்ணா நகர் கிழக்கு,13.0849695,80.2214129,102,inside
+Anna Nagar West,அண்ணா நகர் மேற்கு,13.0940791,80.1922978,88,inside
+Ayanavaram,அயனாவரம்,13.0946157,80.23541,98,inside
+Flower Bazaar,பூக்கடை,13.089344,80.2819705,57,inside
+Kondithope,,13.1000404,80.2790836,54,inside
+Seven Wells,,13.1005688,80.2821153,55,inside
+Lock Nagar,,13.0665028,80.2815982,114,inside
+Ganapathy Colony,கணபதி காலனி,13.0508508,80.2597323,118,inside
+Ambattur,அம்பத்தூர்,13.1055654,80.1639586,85,inside
+Mogappair East,முகப்பேர் கிழக்கு,13.0835142,80.1840779,93,inside
+GingerBread,,13.0802164,80.1736956,91,inside
+Korattur,கொரட்டூர்,13.1115484,80.1846272,84,inside
+Foreshore Estate,பட்டினம்பாக்கம்,13.0249209,80.2776875,126,inside
+Srinagar Colony,ஸ்ரீநகர் காலனி,13.0134666,80.2302782,169,inside
+Nanganallur,நங்கநல்லூர்,12.9801242,80.184902,167,inside
+Madipakkam,மடிப்பாக்கம்,12.9611348,80.2001292,188,inside
+Kannan Nagar,கண்ணன் நகர்,12.9699068,80.1893164,167,inside
+Balaji Nagar,பாலாஜி நகர்,12.9721642,80.1905716,185,inside
+Puzhuthivakkam,புழுதிவாக்கம்,12.9691428,80.2062626,186,inside
+Ram Nagar,ராம் நகர்,12.9653558,80.2118131,186,inside
+Sadasiva Nagar,சதாசிவ நகர்,12.9651292,80.2028543,188,inside
+Ernavur,எர்ணாவூர்,13.1893545,80.3111383,3,inside
+Tondiarpet,தண்டையார்பேட்டை,13.1277669,80.2895845,40,inside
+Kodungaiyur,கொடுங்கையூர்,13.1308188,80.2561816,36,inside
+Manali,மணலி,13.1810602,80.2694192,18,inside
+Old Washermanpet,பழைய வண்ணாரப்பேட்டை,13.1122762,80.2893812,49,inside
+Tollgate,,13.1429527,80.2955738,39,inside
+Grace Garden,,13.11809,80.2914726,49,inside
+Korukkupet,கோருக்குப்பெட்டை,13.1215344,80.2837912,42,inside
+New Washermanpet,புதிய வண்ணாரப்பேட்டை,13.1338663,80.2903592,40,inside
+Jeeva Nagar,ஜீவா நகர்,13.1392974,80.2915889,39,inside
+Cherian Nagar,,13.138415,80.2971562,39,inside
+Kannadasan Nagar,கண்ணதாசன் நகர்,13.1297672,80.2619539,37,inside
+Muthamizh Nagar,முத்தமிழ் நகர்,13.1334717,80.2495711,35,inside
+Rajarathinam Colony,ராஜரத்தினம் காலனி,13.1285591,80.2676492,37,inside
+MKB Nagar,,13.1225331,80.2631374,37,inside
+Pulianthope,புளியந்தோப்பு,13.1008425,80.2626247,73,inside
+Vepery,வேப்பேரி,13.0842952,80.2622738,58,inside
+Purasawalkam,புரசைவாக்கம்,13.0893275,80.2550331,78,inside
+Sembiyam,,13.1220126,80.2412158,67,inside
+Agaram,அகரம்,13.1146491,80.2297557,68,inside
+GKM Colony,,13.1119489,80.2204632,69,inside
+SIDCO Nagar,சிட்கோ நகர்,13.1075596,80.2009613,94,inside
+Postal Colony,தபால் காலனி,13.036329,80.2195477,134,inside
+United India Colony,யுனைடெட் இந்தியா காலனி,13.0520826,80.2251298,132,inside
+Maruthur Gopalan Ramachandran Nagar,மருதூர் கோபாலன் ராமச்சந்திரன் நகர்,13.0341197,80.1990398,138,inside
+Jafferkhanpet,ஜாஃபர்கான் பேட்டை,13.0299496,80.2054201,138,inside
+Nesapakkam,நெசப்பாக்கம்,13.0344902,80.1913012,137,inside
+Ramapuram,ராமாவரம்,13.0314192,80.1789136,155,inside
+SBI Colony,எஸ்பிஐ காலனி,13.0537733,80.1989368,129,inside
+MMDA Colony,,13.0693886,80.2142703,105,inside
+Mehta Nagar,மேத்தா நகர்,13.0703783,80.2268067,107,inside
+NGO Colony,என்.ஜி.ஓ. காலனி,13.064553,80.2199644,106,inside
+Moolakadai,மூலக்கடை,13.1291684,80.2416991,35,inside
+Poompuhar Nagar,பூம்புகார் நகர்,13.093725,80.2527966,76,inside
+Periyar Nagar,பெரியார் நகர்,13.1159911,80.2250849,68,inside
+Senthil Nagar,செந்தில் நகர்,13.1216402,80.202656,64,inside
+Valasaravakkam,வளசரவாக்கம்,13.0430231,80.1752124,152,inside
+Maduravoyal,மதுரவாயல்,13.060603,80.1660878,147,inside
+Nerkundram,நெற்குன்றம்,13.0688386,80.1838987,145,inside
+Nandambakkam,நந்தம்பாக்கம்,13.0166484,80.1911885,158,inside
+Manapakkam,மணப்பாக்கம்,13.0147531,80.1744935,157,inside
+Mugalivakkam,முகலிவாக்கம்,13.0205798,80.1685163,156,inside
+Madanandapuram,,13.0235157,80.1534231,156,inside
+Aspiran Garden,,13.0862695,80.2370386,98,inside
+Kilpauk Garden,,13.0845407,80.2311064,101,inside
+Aziz Nagar,,13.0486971,80.2281137,132,inside
+Kamarajar Colony,காமராஜர் காலனி,13.0499741,80.2201288,132,inside
+Virugambakkam,விருகம்பாக்கம்,13.052264,80.1916925,128,inside
+Indira Colony,இந்திரா காலனி,13.0331309,80.2109268,135,inside
+Vannanthurai,,12.9968645,80.2616099,174,inside
+Lakshmi Hayagriva Nagar,,12.9854291,80.212138,176,inside
+Bakhtavachalam Nagar,,12.9778604,80.179105,166,inside
+Ottagapalayam,,13.0433092,80.2130163,135,inside
+Kumaran Colony,,13.0527789,80.2070459,129,inside
+Velayudam Colony,,13.0497555,80.202848,129,inside
+Devaraj Nagar,தேவராஜ் நகர்,13.0572099,80.2033582,129,inside
+Ullagaram,உல்லகரம்,12.9765868,80.1967196,185,inside
+Moovarasampettai,மூவரசம்பேட்டை,12.9693665,80.1833591,166,inside
+Gemini,ஜெமினி,13.0521036,80.2500075,113,inside
+Ellaiamman Colony,,13.0469862,80.2519362,118,inside
+Evening Bazaar,,13.0849322,80.2787202,59,inside
+Sharma Nagar,,13.1229847,80.2533028,36,inside
+Raj Bhavan,ராஜ் பவன்,13.0079401,80.2263985,172,inside
+Kottivakkam,கொட்டிவாக்கம்,12.9705053,80.2615033,181,inside
+Palavakkam,பாலவாக்கம்,12.95999,80.2560268,183,inside
+Neelankarai,நீலாங்கரை,12.9454955,80.2574692,192,inside
+Vijaynagar,விஜயநகர்,12.9757425,80.2209882,177,inside
+Narayanapuram,,12.9417967,80.2083837,189,inside
+Jalladiampet,,12.9197533,80.2016924,191,inside
+Karapakkam,காரப்பாக்கம்,12.9117073,80.2277203,198,inside
+Injambakkam,ஈஞ்சம்பாக்கம்,12.9189367,80.251295,194,inside
+Uthandi,உத்தண்டி,12.8687677,80.247209,197,inside
+Voltas Colony,வோல்டாஸ் காலனி,12.9744987,80.1863675,167,inside
+Union Carbide Colony,யூனியன் கார்பைட் காலனி,12.9739802,80.1931481,186,inside
+Kathivakkam,கத்திவாக்கம்,13.2141807,80.3187499,2,inside
+Ennore,எண்ணூர்,13.2258262,80.3243551,1,inside
+Thazhankuppam,தாழன்குப்பம்,13.2271357,80.3281547,1,inside
+Pazhavanthangal,பழவந்தாங்கல்,12.9883524,80.1891324,164,inside
+Thillai Ganga Nagar,தில்லை கங்கா நகர்,12.989843,80.1936624,162,inside
+Periamet,,13.0844145,80.2692766,58,inside
+Sriram Nagar,ஸ்ரீராம் நகர்,13.0035494,80.2443172,170,inside
+Valmiki Nagar,வால்மீகி நகர்,12.9804404,80.2645577,180,inside
+Meenambakkam,மீனம்பாக்கம்,12.9866009,80.1726357,159,inside
+Arunachalapuram,,13.0087347,80.2608522,174,inside
+Padmanabha Nagar,பத்மநாப நகர்,13.0045512,80.2587292,174,inside
+Karpagam Garden,கற்பகம் கார்டன்,13.0071776,80.2615446,174,inside
+Jeevarathinam Nagar,,13.002057,80.2606946,174,inside
+Parameswari Nagar,பரமேஸ்வரி நகர்,13.0027868,80.2581254,174,inside
+Radhakrishnan Nagar,ராதாகிருஷ்ணன் நகர்,12.994345,80.2586907,179,inside
+Trustpuram,டிரஸ்ட் புரம்,13.0555649,80.2233364,112,inside
+Chintadripet,சிந்தாதிரிப்பேட்டை,13.0761258,80.270781,62,inside
+Ezhil Nagar,எழில் நகர்,13.1287209,80.2724837,41,inside
+Mathur MMDA Colony,,13.170512,80.2480691,19,inside
+Madhavaram Milk Colony,மாதவரம் பால் காலனி,13.1524704,80.2402707,26,inside
+Madhavaram,மாதவரம்,13.1413558,80.2325141,28,inside
+Kosappur,கொசப்பூர்,13.1818301,80.2350982,17,inside
+Chettimedu,,13.1833898,80.2288097,17,inside
+Taramani,தரமணி,12.9849067,80.2404069,178,inside
+Doveton,,13.0873218,80.258079,58,inside
+Ganesh Nagar,கணேஷ் நகர்,12.9794114,80.2581619,180,inside
+Devendra Nagar,தேவேந்திர நகர்,12.9787571,80.25546,180,inside
+PTC Colony,,12.9763834,80.2565187,180,inside
+AGS Colony,,12.9745922,80.2564334,181,inside
+Srinivasa Nagar,சீனிவாச நகர்,12.9749674,80.2600077,180,inside
+Tiruvalluvar Nagar,திருவள்ளுவர் நகர்,12.9770564,80.2625371,180,inside
+Nava Bharath Colony,நவ பரத் காலனி,12.9900052,80.2666669,179,inside
+Teachers Colony,,12.9833689,80.2661849,180,inside
+Bakthavatchalam Nagar,,13.003406,80.2530941,173,inside
+Venkateswara Nagar,வெங்கடேஸ்வரா நகர்,13.00328,80.2620566,174,inside
+Damodarapuram,,13.0018073,80.2629813,174,inside
+Gangai Nagar,கங்கை நகர்,12.9835252,80.2159236,176,inside
+Gangaiamman Nagar,,13.0743009,80.1794579,91,inside
+Dwaraka Nagar Phase I,,13.1949382,80.2724494,16,inside
+Dwaraka Nagar Phase II,,13.1946039,80.2787579,16,inside
+Saidayankuppam,சைதையாங்குப்பம்,13.1854785,80.2924308,16,inside
+Mattankuppam,மட்டன்குப்பம்,13.05672,80.2797427,116,inside
+Rail Nagar,ரயில் நகர்,13.0767364,80.189912,93,inside
+Dhanalkshmi Colony,,13.0549266,80.2054668,129,inside
+Choolai,சூலை,13.0906283,80.2621417,78,inside
+Jamalaya Nagar,,13.106081,80.2487069,71,inside
+Kannigapuram,,13.107125,80.2634419,72,inside
+Mettupalayam,மேட்டுப்பாளையம்,13.1075542,80.2540237,71,inside
+Ekangipuram,,13.1043525,80.2443478,74,inside
+Kosapet,,13.0939346,80.2547909,78,inside
+Otteri,ஓட்டேரி,13.0969576,80.2487215,74,inside
+Tharachand Nagar,,13.0540558,80.1953376,128,inside
+Mahaveer Colony,மஹாவீர் காலனி,13.0829169,80.2615578,58,inside
+Chinmaya Nagar,சின்மயா நகர்,13.0622141,80.1991841,127,inside
+Urur Kuppam,,13.0041761,80.2732889,174,inside
+Kaveri Rangan Colony,காவேரி ரங்கன் காலனி,13.0537639,80.2012328,129,inside
+Kalaimagal Nagar,,13.0252622,80.2049078,168,inside
+Defence Colony,,13.0220072,80.1995027,158,inside
+Sundar Nagar,சுந்தர் நகர்,13.016778,80.1987308,158,inside
+Ekkattuthangal,ஈக்காட்டுத்தாங்கல்,13.0242453,80.2065506,168,inside
+Ambal Nagar,அம்பாள் நகர்,13.0183525,80.2044501,168,inside
+Navaratna Gardens,,13.0230861,80.201086,168,inside
+Burma Colony,பர்மா காலனி,13.0282675,80.1962764,158,inside
+Achutan Nagar,,13.0202783,80.2010261,168,inside
+Vasudevan Nagar,வாசுதேவன் நகர்,13.0282882,80.206826,138,inside
+Sapthagiri Colony,,13.0300387,80.201651,138,inside
+Y Block,,13.0868775,80.2116651,103,inside
+W Block,,13.0866698,80.2164999,102,inside
+X Block,,13.0871684,80.2141487,103,inside
+Q Block,,13.0914061,80.216724,102,inside
+R Block,,13.0914541,80.2141958,103,inside
+S Block,,13.0915341,80.2119077,103,inside
+V Block,,13.089614,80.2119237,103,inside
+U Block,,13.0895133,80.2141604,103,inside
+T Block,,13.089354,80.2165985,102,inside
+E Block,,13.0867859,80.2194695,102,inside
+F Block,,13.0868298,80.2216363,102,inside
+Labour Colony,,13.0154717,80.2094084,168,inside
+Bharathidasan Colony,பாரதிதாசன் காலனி,13.033573,80.2044056,138,inside
+Nehru Nagar,நேரு நகர்,13.2159326,80.3187286,2,inside
+Kellys,,13.0828189,80.2433281,100,inside
+Lotus Colony,,13.0296417,80.2403771,122,inside
+Ganesapuram,கணேசபுரம்,13.0308533,80.2450086,122,inside
+Sector 10,,13.0428496,80.1949051,137,inside
+Sector 9 Santosh Colony,,13.0428163,80.1958341,137,inside
+Sector 4,,13.0419763,80.2005224,136,inside
+Sector 3,,13.0415271,80.2036866,136,inside
+Sector 2,,13.0393787,80.2029891,136,inside
+Sector 5,,13.0397174,80.2008875,136,inside
+Sector 8,,13.040186,80.1976881,137,inside
+Sector 11,,13.040635,80.1945064,137,inside
+Sector 1,,13.0374993,80.2026575,136,inside
+Sector 6,,13.0377793,80.1998576,136,inside
+Sector 7,,13.0381441,80.1973292,137,inside
+Sector 12,,13.0385747,80.1942789,137,inside
+Sector 13,,13.0410036,80.2075603,136,inside
+Sector 14,,13.0440835,80.2064912,135,inside
+Paari Nagar,பாரி நகர்,13.0278946,80.2090761,138,inside
+Thiruvottiyur,திருவொற்றியூர்,13.1565668,80.3006508,11,inside
+Kannagi Nagar,கண்ணகி நகர்,12.927645,80.2396671,196,inside
+Dr Ambedkar Nagar,டாக்டர் அம்பேத்கர் நகர்,12.9900554,80.2074843,175,inside
+Maduvankarai,,13.0020222,80.2106556,172,inside
+AGS Officers Colony,,12.9789702,80.2097046,176,inside
+Alwarthirunagar,ஆழ்வார்திருநகர்,13.047486,80.1836687,149,inside
+Athipet,ஆதிபேட்டை,13.0927842,80.1545584,86,inside
+Baba Nagar,பாபா நகர்,13.1172166,80.203117,94,inside
+Rajan Nagar,ராஜன் நகர்,13.1238943,80.2080409,65,inside
+Jayaram Nagar,ஜெயராம் நகர்,13.1204643,80.2107535,65,inside
+SRB Nagar,,13.1186376,80.201512,83,inside
+North Jagannatha Nagar,,13.11241,80.2022416,94,inside
+South Jagannatha Nagar,,13.1098186,80.2021128,94,inside
+Rajaji Nagar,இராஜாஜி நகர்,13.1115156,80.2116057,64,inside
+Kolathur,கொளத்தூர்,13.1236545,80.2128848,65,inside
+Mahatma Gandhi Nagar,மகாத்மா காந்தி நகர்,13.1268628,80.2112109,65,inside
+Venkatapuram,வெங்கடபுரம்,13.1175107,80.152976,81,inside
+Karukku,கருக்கு,13.1188806,80.1677536,82,inside
+Prithvipakkam,,13.118458,80.1595966,81,inside
+Parvathi Nagar,பார்வதி நகர்,13.1457558,80.249642,34,inside
+Chettinad Enclave,,12.9417495,80.2019131,189,inside
+Maxworth Nagar,,12.9439172,80.1994903,189,snapped_72m
+Ariyalur,அரியலூர்,13.1918629,80.2511372,17,inside
+Theyampakkam,,13.1947743,80.2346111,17,inside
+Kanniyampettai,,13.1931288,80.2556203,16,inside
+Madanankuppam,,13.1360754,80.1900083,32,inside
+Jeth Nagar,,13.027831,80.262238,126,inside
+Kesavaperumalpuram,,13.0211245,80.2541184,171,inside
+Kottur Gardens,,13.0206311,80.2441277,170,inside
+Varadapuram,,13.0154212,80.2459988,170,inside
+PVS Nagar,,12.9476068,80.242015,193,inside
+Shakti Nagar,,12.9449719,80.2406331,193,inside
+Secretariat Colony,,12.9382715,80.2440063,195,inside
+Metukuppam,,12.9365399,80.2374231,195,inside
+Pebble Beach,,12.9000918,80.2542837,197,inside
+Puzhal,புழல்,13.1591141,80.2031147,23,inside
+Esplanade,,13.0891354,80.2851877,57,inside
+Lloyds Colony,,13.0490735,80.2715991,120,inside
+Sundarapuram,,13.096959,80.2666324,77,inside
+VOC Nagar,,13.1054685,80.2621581,72,inside
+Venkatesapuram,,13.1085103,80.2640242,72,inside
+Narasimha Nagar,,13.1047765,80.2661886,72,inside
+Thiruvalluvar Nagar,,13.0934726,80.2386835,98,inside
+Officers Colony,,13.1006814,80.2297082,96,inside
+Avvai Thiru Nagar,அவ்வை திரு நகர்,13.0638722,80.1918646,127,inside
+IAS Officers Colony,,13.013385,80.1801942,157,inside
+Kamraj nagar,,12.9839305,80.2572826,180,inside
+Gandhi Nagar,,13.0582742,80.2078872,129,inside
+Ernavur Gate,,13.1849265,80.3126427,5,inside
+Pallikaranai,பள்ளிக்கரணை,12.9304748,80.2077692,189,inside
+Assisi Nagar,,13.1646096,80.2330002,26,inside
+Mathur,மாத்தூர்,13.1678641,80.2436918,19,inside
+Kuberan Nagar,,12.9574931,80.2062346,188,inside
+Vanagaram,வானகரம்,13.0605498,80.1525817,150,inside
+Alapakkam,அலப்பாக்கம்,13.049901,80.1654347,146,inside
+Collector Nagar,,13.0884944,80.1909707,89,inside
+Dwaraka Nagar,,13.1941304,80.2742752,16,inside
+Sheela Nagar,,12.9650499,80.2020747,188,inside
+Ramalinga Nagar,,12.9675942,80.2058513,186,inside
+Jayachandran Nagar,ஜெயச்சந்திரன் நகர்,12.9216334,80.1987877,191,inside
+Avvai Nagar,,12.9773778,80.2538832,180,inside
+Elango Nagar,,12.9715538,80.2523792,181,inside
+Govindaswamy Nagar,,12.9685697,80.2459158,182,inside
+Sangam Colony,,12.9673858,80.2558203,181,inside
+Venkateshpuram,,12.9689832,80.2523969,181,inside
+Edayanchavadi,இடையன்சாவடி,13.2169796,80.2850172,15,inside
+Kadapakkam,,13.1984914,80.2652515,16,inside
+Karambakkam,காரம்பாக்கம்,13.0410082,80.1644037,147,inside
+Kathirvedu,கதிர்வேடு,13.1493092,80.2009908,31,inside
+Nolambur,நொளம்பூர்,13.0747182,80.1682206,143,inside
+Puthagaram,புத்தகரம்,13.1182087,80.1923108,83,inside
+Surapet,சூரப்பட்டு,13.1441943,80.1872166,32,inside
+Vadaperumbakkam,வடபெரும்பாக்கம்,13.1754006,80.2183324,17,inside
+Swaminathan Nagar,,12.9713518,80.2543421,181,inside
+Kandaswamy Nagar,,12.9661782,80.2548185,183,inside
+NATCO Colony,,12.9707301,80.2570084,181,inside
+Kannappa Nagar,,12.9755547,80.2569078,180,inside
+Karpagambal Nagar,,12.9736645,80.2596374,181,inside
+Natesan Colony,,12.9730941,80.256686,181,inside
+Kaveri Nagar,காவேரி நகர்,12.9703044,80.2637555,181,inside
+Palkalai Nagar,,12.9655039,80.2592729,183,inside
+Srinivasapuram,சீனிவாசபுரம்,12.9720506,80.2604868,181,inside
+Venkateshwara Nagar,வெங்கடேஸ்வரா நகர்,12.9673698,80.2606307,181,inside
+Lakshmanaperumal Nagar,,12.9716982,80.2616477,181,inside
+DGI Layout,,12.9678914,80.2590113,181,inside
+New Colony,,12.9693267,80.258413,181,inside
+Judge's Colony,,12.9759601,80.2481745,182,inside
+MGR Nagar,எம்.ஜி.ஆர் நகர்,12.9795827,80.2494441,182,inside
+Venkateshwara Nagar Colony,வெங்கடேஸ்வரா நகர் காலனி,12.9769974,80.2446253,182,inside
+Meenava Kuppam,,12.9677025,80.2649455,181,inside
+Tirumalai Nagar,திருமலை நகர்,12.9718042,80.2455776,182,inside
+Jayendra Colony,ஜெயேந்திர காலனி,12.9698277,80.2482316,182,inside
+Sri Krishna Enclave,ஸ்ரீ கிருஷ்ணா என்கிளேவ்,12.9725424,80.2650658,181,inside
+Vikram Sarabhai Industrial Estate,விக்ரம் சாராபாய் தொழிற்பேட்டை,12.9809554,80.2508748,178,inside
+Banu Nagar,பானு நகர்,13.1362418,80.1605342,80,inside
+Oragadam,ஒரகடம்,13.1307573,80.1532831,79,inside
+Madura Kali Nagar,,12.9580319,80.1938321,188,inside
+Vaniya Teynampet,,13.0389894,80.248111,123,inside
+"Central Government Officers Quarters, General Pool Accomodation",,13.0021964,80.2652826,174,inside
+Karthikeyapuram,,12.9625935,80.1945242,187,inside
+Park Square colony,,12.9656647,80.1934861,187,inside
+Zam Bazaar,,13.0592958,80.2710216,114,inside
+Karpagam Avenue,,13.0219794,80.2678296,171,inside
+West Mambalam,மேற்கு மாம்பலம்,13.0409414,80.2199669,134,inside
+Ganga Enclave,,13.0542069,80.2217025,112,inside
+Barathi Nagar,,13.1286699,80.1574226,80,inside
+Ramakrishna Nagar,ராமகிருஷ்ணா நகர்,13.024366,80.261062,171,inside
+NCBS Colony,,12.9854635,80.1896961,164,inside
+AA Block,,13.0834977,80.2164744,103,inside
+AB Block,,13.0835934,80.2141151,103,inside
+AC Block,,13.0837153,80.2113538,103,inside
+Baby Nagar,பேபி நகர்,12.9803651,80.2291946,177,inside
+Dhandeeswaram,,12.9826389,80.224188,177,inside
+Seethapathy Nagar,,12.9819509,80.2270333,177,inside
+Seshadripuram,,12.9798387,80.2306689,178,inside
+Seva Nagar Velachery,,12.9864108,80.2293212,177,inside
+Sony Nagar,சோனி நகர்,12.9865105,80.2279906,177,inside
+Tansi Nagar,டான்சி நகர்,12.9792091,80.2240223,177,inside
+Udhayam Nagar,உதயம் நகர்,12.9791677,80.2321701,178,inside
+Bhuvaneswary Nagar,,12.9699099,80.2219533,177,inside
+VGP Selva Nagar,,12.9712216,80.2211034,177,inside
+JagannathaPuram,,12.9846819,80.2218917,177,inside
+Rajalakshmi Nagar,,12.9852883,80.2187428,177,inside
+Annai Sathya Nagar,,13.0361219,80.1881078,155,inside
+Sri Ragavendra Nagar,ஸ்ரீ ராகவேந்தரா நகர்,13.0372768,80.1860142,155,inside
+Chowdhary Nagar,,13.0379337,80.180924,152,inside
+Janaki Nagar,ஜானகி நகர்,13.0401703,80.1820728,152,inside
+Majestic Colony,மெஜஸ்டிக் காலனி,13.0397585,80.1788757,152,inside
+Sri Laxmi Nagar,ஸ்ரீ லக்ஷ்மி நகர்,13.0363489,80.1806501,155,inside
+Suresh Nagar,சுரேஷ் நகர்,13.0376269,80.1828189,152,inside
+Thirumalai Nagar,திருமலை நகர்,13.0347587,80.182392,155,inside
+Veerappa Nagar,வீரப்பா நகர்,13.042342,80.1852505,152,inside
+Mukti Enclave,,13.0171314,80.1772628,157,inside
+Reserve Bank Staff Quarters,,13.0785501,80.2391628,100,inside
+Pudur,,13.1298206,80.1592132,80,inside
+Kaladipet,,13.1515971,80.2987772,12,inside
+Nanganallur Co-op Society Colony,,12.9879605,80.1905915,164,inside
+Bharathiyar Nagar,பாரதியார் நகர்,13.1858089,80.3155515,5,inside
+All India Radio Housing Board,,13.1872085,80.3123029,3,inside
+Moolakothalam,,13.1067345,80.2764807,53,inside
+GOCHS Colony,ஜிஓசிஹெச்எஸ் காலனி,12.9978724,80.2691711,174,inside
+Government Estate,,13.0673606,80.2767992,59,inside
+Stanley Nagar,,13.1092682,80.2721885,53,inside
+Panaiyur,பனையூர்,12.8878546,80.2451984,197,inside
+Bharathipuram,,13.0776651,80.2222538,101,inside
+Thiyagaraya Nagar,,13.0385946,80.2335793,133,inside
+Sivakami Nagar,,13.1976526,80.3172985,3,inside
+Kamatchi Nagar,,12.9445831,80.2158648,189,inside
+Kamakoti Nagar,,12.9410358,80.2132684,189,inside
+TNHB Colony,டீஎன்ஹெச்பி காலனி,12.9914196,80.2120593,175,inside
+Sai Nagar,,12.9516304,80.2344713,193,inside
+K.K.Nagar,,13.0407966,80.2029798,136,inside
+Kargil Nagar,,13.1730186,80.2922411,7,inside
+Thirumangalam,திருமங்கலம்,13.0841203,80.199892,104,inside
+Vijayalakshmipuram,விஜயலட்சுமிபுரம்,13.1238222,80.1549601,80,inside
+KSR Nagar,,13.0996418,80.15656,86,inside
+Mangalapuram,,13.1028503,80.1680614,85,inside
+Kallikuppam,,13.1331405,80.1701786,82,inside
+Thiruvengada Nagar,,13.1193375,80.1453927,81,inside
+Manjampakkam,,13.1595906,80.2247041,25,inside
+Kavankarai,காவாங்கரை,13.1686673,80.1970144,23,inside
+Menambedu,மேனாம்பேடு,13.1218113,80.1633057,82,inside
+Madhangakuppam,மதங்கக்குப்பம்,13.1314353,80.1816666,83,inside
+Shanmugapuram,சண்முகபுரம்,13.1412589,80.1808717,32,inside
+Mannurpet,மண்ணூர்பேட்டை,13.0951449,80.1834214,87,inside
+Shobha Nagar,,13.12248,80.1421787,81,snapped_128m
+Vinayagapuram,,13.1263166,80.1508413,79,inside
+Thiru Vi Ka Nagar,,13.1208988,80.2295103,66,inside
+Alandur,ஆலந்தூர்,13.0031313,80.2044427,160,inside
+Koyambedu,கோயம்பேடு,13.0715193,80.1998093,127,inside
+Vadapalani,வடபழனி,13.0502979,80.2118301,130,inside
+Mogappair West,முகப்பேர் மேற்கு,13.0823472,80.1702158,91,inside
+Ambattur OT,அம்பத்தூர் பழைய நகரம் (ஓ.டி),13.1197057,80.1504272,81,inside
+Thirumalai Priya Nagar,,13.128997,80.1621536,80,inside
+Devanampattu,,13.1249537,80.1636098,82,inside
+Varadharajapuram,வரதராஜபுரம்,13.1124639,80.153386,85,inside
+Banu Nagar West,,13.1337252,80.1556434,79,inside
+Lakshmipuram,லட்சுமிபுரம்,13.1348334,80.1989474,32,inside
+Kumaran Nagar,குமரன் நகர்,13.128209,80.2023945,64,inside
+Ponniammanmedu,பொன்னியம்மன்மேடு,13.1343322,80.2282241,29,inside
+Radha Avenue,,13.0510841,80.1773014,149,inside
+Nesammal Nagar,,13.0617324,80.1816717,148,inside
+Balakrishna Nagar,,13.0594154,80.1847447,148,inside
+AVM Avenue,,13.0503537,80.1876226,128,inside
+Natesan Nagar,,13.0578976,80.1927044,127,inside
+Mettukuppam,,13.0585353,80.1734457,144,inside
+Sri Devi Nagar,,13.0453388,80.1685028,147,inside
+Chettiyar Agaram,,13.0480364,80.1439761,150,inside
+Padi Pudhu Nagar,,13.0831093,80.1892951,90,inside
+Golden George Nagar,,13.0748167,80.1823757,93,inside
+Sector 9,,13.0419995,80.1982446,137,inside
+Thundalam,துண்டாலம்,13.0466104,80.1374113,150,inside
+Sivabhutam,சிவபூதம்,13.0578162,80.1553722,150,snapped_86m
+AD Block,,13.0839691,80.2090864,103,inside
+AE Block,,13.0838352,80.2068183,103,inside
+AF Block,,13.0839543,80.2041989,104,inside
+AG Block,,13.0813136,80.216433,103,inside
+AH Block,,13.0807983,80.21376,103,inside
+AI Block,,13.0810957,80.2111802,103,inside
+AJ Block,,13.0809105,80.2086074,103,inside
+AK Block,,13.0809568,80.2066169,103,inside
+AL Block,,13.0812983,80.2040976,103,inside
+AM Block,,13.0797646,80.2023247,104,inside
+Jawahar Colony,,13.0817805,80.2011998,104,inside
+Kurinji Colony,,13.0840039,80.2014018,104,inside
+A Block,,13.0834688,80.2191724,102,inside
+B Block,,13.0830706,80.2215973,102,inside
+C Block,,13.0835161,80.2240777,102,inside
+D Block,,13.0848995,80.2254703,101,inside
+Shanthi Colony,,13.082097,80.2134672,103,inside
+Z Block,,13.08922,80.2100006,103,inside
+P Block,,13.093078,80.2167717,102,inside
+O Block,,13.0936502,80.2232928,102,inside
+N Block,,13.0929494,80.2214843,102,inside
+M Block,,13.0931294,80.2198342,102,inside
+L Block,,13.0910787,80.2249296,101,inside
+K Block,,13.0905519,80.2217701,102,inside
+J Block,,13.0911751,80.2197319,102,inside
+I Block,,13.0943388,80.2024514,104,inside
+H Block,,13.0873549,80.2011967,104,inside
+G Block,,13.0915616,80.2083567,104,inside
+Velachery,வேளச்சேரி,12.9772611,80.2209183,177,inside
+Golden Colony,,13.0893468,80.1798515,89,inside
+Vetri Nagar,,13.1232537,80.2267914,66,inside
+Thirupathi Nagar,,13.1263927,80.2223267,66,inside
+Jawahar Nagar,,13.1112348,80.2282148,68,inside
+Anjugam Nagar,,13.1228644,80.2192403,65,inside
+Amirthammal Colony,,13.1108352,80.2349898,69,inside

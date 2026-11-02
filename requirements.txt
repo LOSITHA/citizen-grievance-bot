@@ -10,3 +10,5 @@ uvicorn
 streamlit
 sqlalchemy
 pytest
+requests
+requests
