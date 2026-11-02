@@ -1,0 +1,12 @@
+torch
+transformers
+datasets
+scikit-learn
+pandas
+numpy
+rapidfuzz
+fastapi
+uvicorn
+streamlit
+sqlalchemy
+pytest
