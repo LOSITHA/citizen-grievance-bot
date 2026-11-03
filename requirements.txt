@@ -12,3 +12,4 @@ sqlalchemy
 pytest
 requests
 requests
+indic-transliteration
