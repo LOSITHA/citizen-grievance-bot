@@ -1,4 +1,4 @@
-﻿import re, time
+import re, time
 import gradio as gr
 from src.app import pipeline, tracker
 
@@ -25,7 +25,7 @@ def chat(msg, history):
         if not g: return "I couldn't find that ticket number."
         t, h = g
         due = time.strftime("%d %b %Y %H:%M", time.localtime(t["due"]))
-        return f"Ticket {t['id']}: {t['status']}\nDepartment: {t['dept']}\nTarget resolution: {due}\nLatest: {h[-1]['note'] or h[-1]['status']}"
+        return f"Ticket {t['id']}: {t['status']}\nDepartment: {pipeline.pretty(t['dept'])}\nTarget resolution: {due}\nLatest: {h[-1]['note'] or h[-1]['status']}"
     r = pipeline.handle(msg)
     extra = f"\n\nA similar complaint ({r['parent']}) is already open; yours is linked to it." if r["parent"] else ""
     return r["reply"] + extra

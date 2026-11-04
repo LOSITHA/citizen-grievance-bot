@@ -1,4 +1,4 @@
-﻿import re
+import re
 import joblib
 from src.app import tracker
 
@@ -26,6 +26,22 @@ CLARIFY = {
     "hi": "मुझे समझ नहीं आया कि समस्या क्या है। कहाँ और क्या दिक्कत है, कृपया बताएँ। (टिकट {id})",
 }
 
+def pretty(d):
+    return d.replace("_", " ").title()
+
+RANK = ["low", "medium", "high", "critical"]
+SAFETY_TOKENS = {"spark", "sparks", "smoke", "electrocuted", "electrocute", "manhole", "bite", "bitten", "fire",
+                 "ambulance", "accident", "gir", "chot"}
+SAFETY_TA = ("கடித்த", "ஆம்புலன்ஸ்")
+
+def safety_override(text, sev, urg):
+    """Life-risk wording forces at least 'high' severity and 'immediate' urgency."""
+    w = set(re.findall(r"[a-z]+", text.lower()))
+    if (w & SAFETY_TOKENS) or any(x in text for x in SAFETY_TA):
+        if sev in RANK and RANK.index(sev) < RANK.index("high"): sev = "high"
+        return sev, "immediate", True
+    return sev, urg, False
+
 def detect_lang(t):
     if TAMIL.search(t): return "ta"
     if DEVA.search(t): return "hi"
@@ -50,11 +66,13 @@ def handle(text):
     for t, m in MODELS.items():
         P = m.predict_proba([text])[0]; i = P.argmax()
         out[t], conf[t] = m.classes_[i], float(P[i])
+    out["severity"], out["urgency"], flagged = safety_override(text, out["severity"], out["urgency"])
     dept = out["dept"] if conf["dept"] >= THRESH else "Unclassified"
     why = explain(text, out["dept"]) if dept != "Unclassified" else []
+    if flagged: why = why + ["SAFETY-KEYWORD"]
     tid, parent = tracker.create(text, lang, dept, out["severity"], out["urgency"], conf["dept"], locate(text), ", ".join(why))
     tpl = CLARIFY if dept == "Unclassified" else REPLY
     return {"ticket": tid, "lang": lang, "dept": dept, "severity": out["severity"], "urgency": out["urgency"],
-            "confidence": round(conf["dept"], 2), "why": why, "parent": parent, "reply": tpl[lang].format(id=tid, dept=dept)}
+            "confidence": round(conf["dept"], 2), "why": why, "parent": parent, "reply": tpl[lang].format(id=tid, dept=pretty(dept))}
 
 

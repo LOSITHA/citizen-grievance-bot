@@ -47,3 +47,19 @@ The demo auto-routes at confidence >= 0.5 and sends the rest to a human triage q
 - Translate-first covers Tamil script only; romanised Tanglish and Hinglish are not translated.
 - The ward matcher is evaluated separately (`python -m src.geo.eval_matcher`) but is not yet wired into the chat flow.
 
+
+## Run the demo
+1. `python -m venv .venv`, activate it, then `pip install -r requirements.txt`
+2. `python -m src.app.ui` and open http://127.0.0.1:7860
+3. Citizen chat: type a complaint in English, Tamil, Tanglish or Hinglish. Send `status GRV-000001` to track a ticket.
+4. Officer console: update ticket status, or click "Escalate overdue (SLA)".
+5. Optional: set `SLA_SCALE` to a small number (for example `0.001`) to see SLA escalation in seconds.
+6. Run the checks with `python -m tests.smoke_test`.
+
+## What is different about this system
+- Confidence-based human triage: low-confidence complaints become "Needs Triage" tickets and the bot asks a clarifying question in the user's language.
+- Duplicate linking: similar open complaints in the same department are linked to a parent ticket, so officers can see hotspots.
+- Explainable routing: each ticket stores the text features that drove its department.
+- SLA timers and auto-escalation based on severity and urgency.
+- Safety-keyword override: life-risk wording (live wire, open manhole, dog bite, ambulance delay) forces at least high severity and immediate urgency. This is a design choice and is not independently validated.
+- Code-mixed input (Tanglish, Hinglish) is handled directly.
