@@ -57,3 +57,4 @@ def handle(text):
     return {"ticket": tid, "lang": lang, "dept": dept, "severity": out["severity"], "urgency": out["urgency"],
             "confidence": round(conf["dept"], 2), "why": why, "parent": parent, "reply": tpl[lang].format(id=tid, dept=dept)}
 
+

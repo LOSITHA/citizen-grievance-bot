@@ -2,6 +2,22 @@
 import gradio as gr
 from src.app import pipeline, tracker
 
+CSS = """
+.gradio-container, .gradio-container *:not(h1):not(h2):not(h3) { font-size: 19px !important; font-weight: 600 !important; }
+.gradio-container h1 { font-size: 40px !important; font-weight: 800 !important; }
+.gradio-container h2, .gradio-container h3 { font-size: 28px !important; font-weight: 800 !important; }
+.gradio-container button { font-weight: 700 !important; }
+"""
+
+EXAMPLES = [
+    "Enga area la rendu naala water varala. Tanker kooda innum anuppala.",
+    "எங்கள் பகுதியில் கடந்த மூன்று நாட்களாக குடிநீர் வரவில்லை. அதிகாரிகளிடம் புகார் கொடுத்தும் எந்த நடவடிக்கையும் எடுக்கவில்லை.",
+    "Sadak par bahut bade gaddhe hain. Kal ek bike wala gir gaya tha aur use chot bhi lagi.",
+    "An exposed electrical wire is hanging dangerously low near a crowded bus stop. Someone could get electrocuted.",
+    "Pata nahi kya problem hai, lekin hamare yahan sab kuch pehle se zyada kharab ho gaya hai.",
+    "status GRV-000001",
+]
+
 def chat(msg, history):
     m = re.match(r"\s*status\s+(GRV-\d+)", msg, re.I)
     if m:
@@ -23,11 +39,13 @@ def escalate():
     return f"Escalated: {', '.join(ids) or 'none'}", tracker.table()
 
 with gr.Blocks(title="Citizen Grievance Bot") as demo:
+    gr.Markdown("# Multilingual Citizen Grievance Chatbot\n**HI-02** | Tamil, Hindi, English, Tanglish and Hinglish | routing, tracking and escalation")
     with gr.Tab("Citizen chat"):
-        gr.Markdown("Type a complaint in English, Tamil, Tanglish or Hinglish. Send `status GRV-000001` to track a ticket.")
-        gr.ChatInterface(chat)
+        gr.Markdown("### Type a complaint in any supported language. Send `status GRV-000001` to track a ticket.")
+        gr.ChatInterface(chat, examples=EXAMPLES, cache_examples=False)
     with gr.Tab("Officer console"):
-        table = gr.Dataframe(value=tracker.table, headers=tracker.HEADERS, interactive=False)
+        gr.Markdown("### Ticket queue (SLA due time, duplicates, status)")
+        table = gr.Dataframe(value=tracker.table, headers=tracker.HEADERS, interactive=False, wrap=True)
         msg = gr.Textbox(label="Result", interactive=False)
         with gr.Row():
             tid = gr.Textbox(label="Ticket id (e.g. GRV-000001)")
@@ -39,4 +57,7 @@ with gr.Blocks(title="Citizen Grievance Bot") as demo:
             gr.Button("Refresh").click(tracker.table, None, table)
 
 if __name__ == "__main__":
-    demo.launch()
+    try:
+        demo.launch(theme=gr.themes.Soft(primary_hue="blue", text_size="lg"), css=CSS)
+    except TypeError:
+        demo.launch()
