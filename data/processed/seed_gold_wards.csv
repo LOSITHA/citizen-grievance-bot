@@ -8,14 +8,14 @@ g0006,Sewage water is mixing with the drinking water supply in our street near S
 g0007,"Sir, T Nagar bus stand pakkathula footpath la full ah kadai potturukanga, nadakka idame illa",133,landmark,"13.0412, 80.2340",133,landmark,554,,T Nagar bus terminus
 g0008,"எங்கள் தெருவில் நேற்று இரவு முதல் மின்சாரம் இல்லை. கபாலீஸ்வரர் கோவில் பின்புறம், மயிலாப்பூர்.",124,landmark,"13.0337, 80.2697",124,landmark,160,,Kapaleeshwarar temple
 g0009,"Tambaram station ke bahar road pe paani bhara hai, sewage overflow ho raha hai, please jaldi dekhiye",,outside_gcc,,OUTSIDE,landmark,,,Tambaram is a separate corporation
-g0010,"Mosquito problem is terrible near Besant Nagar Ashtalakshmi temple. Stagnant water in the vacant plot, please arrange fogging.",179,landmark,"13.0002, 80.2664",174,landmark,472,CHECK,Ashtalakshmi temple
+g0010,"Mosquito problem is terrible near Besant Nagar Ashtalakshmi temple. Stagnant water in the vacant plot, please arrange fogging.",179,landmark,"13.0002, 80.2664",179,landmark,472,verified,"Google Maps point 12.9926,80.2704 -> ward 179 (54 m from coast); matches OSM node"
 g0011,"29C bus romba late ah varudhu, Guindy la 45 minutes wait pannen. Daily idhe prachanai",172,area_same_name,"13.0067, 80.2206",172,area,553,soft,Guindy locality centre
 g0012,"Garbage has not been collected on 5th Cross Street, Adambakkam for a week. The bin is overflowing onto the road.",165,landmark,"12.9886, 80.2008",163,area,269,soft,Adambakkam locality centre
 g0013,வேளச்சேரி விஜயநகர் பேருந்து நிலையம் பக்கத்தில் குடிநீர் குழாய் உடைந்து தண்ணீர் வீணாகிறது,177,landmark,"12.9763, 80.2196",176|177,landmark,52,verified,Velachery Vijayanagar bus stand two wards valid (place within ~150 m of a ward boundary)
 g0014,"Pondy Bazaar la oru transformer la sparks varudhu, yaaravadhu vandhu paarunga, aabathu!",133,landmark,"13.0418, 80.2340",133,landmark,537,,Pondy Bazaar
 g0015,"Mere ghar ke saamne ki road bahut kharab hai, Mylapore tank ke paas, gaadi chalana mushkil hai",124,landmark,"13.0345, 80.2690",124,landmark,197,,Mylapore tank
 g0016,"Stray dogs are chasing children near Marina beach lighthouse. Multiple bite cases reported this week, please act.",121,landmark,"13.0425, 80.2790",121|125,landmark,101,verified,Marina lighthouse two wards valid (place within ~150 m of a ward boundary)
-g0017,"Street light eriyala. Naanga irukra idam Perambur railway station back side, raathri la romba iruttu",71,landmark,"13.1186, 80.2468",44,landmark,111,CHECK,Perambur railway station
+g0017,"Street light eriyala. Naanga irukra idam Perambur railway station back side, raathri la romba iruttu",71,landmark,"13.1186, 80.2468",71|74,landmark,111,verified,"Perambur railway station 13.1077,80.2448 -> ward 71, only 18 m from ward 74 boundary"
 g0018,"No water in the tap since morning, please check.",,no_location_found,,NONE,,,,no location in text
 g0019,"எங்க ஏரியால சாக்கடை அடைச்சிடுச்சு, துர்நாற்றம் தாங்க முடியல.",,no_location_found,,NONE,,,,no location in text
 g0020,"Sir CMBT ke paas illegal parking aur footpath pe thele hain, pedestrians ko chalne ki jagah nahi hai",127,landmark,"13.0694, 80.2048",127,landmark,433,,CMBT
