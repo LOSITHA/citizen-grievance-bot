@@ -1,65 +1,138 @@
-﻿# Multilingual Citizen Grievance Chatbot
+# Multilingual Citizen Grievance Chatbot
 
-**Topic:** HI-02 | **Author:** Lositha (solo)
+**Topic: HI-02** | Solo project by Lositha
 
-An NLP chatbot that accepts grievances in regional Indian languages (Tamil, Hindi, English, and romanised Tanglish/Hinglish), routes each one to the right department, and tracks it until resolution.
+A chatbot that accepts citizen complaints written in English, Tamil script, Tanglish (romanised Tamil) and Hinglish (romanised Hindi), routes each one to the right department, gives the citizen a ticket number, and tracks the complaint until it is resolved or escalated.
 
+## What it does
+- **Understands code-mixed complaints** directly (Tanglish and Hinglish), without translating first.
+- **Routes to a department** and predicts **severity** and **urgency** (TF-IDF + logistic regression).
+- **Knows when it is unsure.** Below a confidence threshold the complaint goes to a human triage queue and the bot asks a clarifying question in the citizen's language instead of guessing.
+- **Ticket numbers** (GRV-000001 and so on) with a ticket card: department, priority, status, expected resolution time.
+- **Tracking.** Citizens type their ticket number in the chat or open the Track my complaint tab: progress bar, latest message from the department, timeline.
+- **Officer console.** Summary cards, filterable queue, status updates with a message to the citizen, one-click escalation of overdue tickets.
+- **SLA timers and auto-escalation** driven by severity and urgency.
+- **Duplicate linking.** Similar open complaints in the same department are linked to one parent ticket, which shows hotspots.
+- **Explainable routing.** The top text features behind each decision are stored on the ticket.
+- **Safety override.** Life-risk wording (live wire, open manhole, dog bite, ambulance delay) forces at least high severity and immediate urgency.
+- **Small talk handled.** Greetings, thanks and one-word messages do not create junk tickets.
 
-## Evaluation honesty
-- Synthetic validation data is templated, so it is near 100% by construction. Only hand-written test sets are reported.
-- Gold wards are partly circular (same polygons as the matcher). Locations within ~150 m of a ward boundary accept either ward.
-- Some test complaints belong to departments that the training data never contained. These are reported separately.
+## How a complaint flows
 
-## Reproduce
-- Ward matcher: `python -m src.geo.eval_matcher`
-- Baseline: `python -m src.nlp.baseline` (results in `docs/results_baseline.md`)
+    citizen message
+          |
+          v
+    small-talk filter (hi / thanks / one word) --> friendly reply, no ticket
+          |
+          v
+    language detection (en / ta / ta_rom / hi_rom)
+          |
+          v
+    classifier: department + severity + urgency + confidence
+          |
+          v
+    safety override (life-risk words -> at least high, immediate)
+          |
+          +-- confidence below threshold --> "Needs Triage" ticket + clarifying question
+          |
+          v
+    duplicate check --> new ticket (SQLite) with an SLA due time
+          |
+          v
+    reply in the citizen's language + ticket card
+          |
+          v
+    Track tab / officer console: Routed -> In progress -> Resolved, or Escalated if the SLA is missed
 
-## Layout
-`src/geo` ward matching | `src/nlp` models and evaluation | `src/app` pipeline, tracker, UI | `data/processed` datasets | `docs` results
-# citizen-grievance-bot
-## Results (independent test: 45 hand-written complaints)
+## Results
+All numbers are on an independent test set of 45 hand-written complaints (12 English, 12 Tamil script, 11 Tanglish, 10 Hinglish). Synthetic validation data is templated and scores about 100%, so it is not reported as evidence.
 
-| system | dept (all 45) | dept (33 rows whose label exists in training) | Tamil-script dept | severity | urgency |
+### How the classifier improved
+
+| model | extra training data | department (all 45) | department (labels it knows) | Tamil script | severity | urgency |
+|---|---|---|---|---|---|---|
+| 1. Baseline | none | 55.6% (25/45) | 75.8% (25/33) | 33% (4/12) | 42.2% | 62.2% |
+| 2. + six new departments | 1,800 rows | 71.1% (32/45) | 76.2% (32/42) | 58% (7/12) | 48.9% | 68.9% |
+| 3. + neutral-wording augmentation (current) | 1,267 rows | **75.6% (34/45)** | **81.0% (34/42)** | 58% (7/12) | 46.7% | 66.7% |
+
+Current model, department accuracy by language: English 92% (11/12), Hinglish 80% (8/10), Tanglish 73% (8/11), Tamil script 58% (7/12).
+
+The first six departments added (revenue, police, education, food and civil supplies, parks, animal control) came from error analysis: 12 of the 45 test complaints belonged to departments the first model had never seen. Accuracy on departments the model already knew barely changed (75.8% to 76.2%), so the headline gain is mostly taxonomy coverage, not better classification.
+
+### Alternatives (trained on the original data, not yet re-run on the larger data)
+
+| system | department (all 45) | department (labels it knows) | Tamil script | severity | urgency |
 |---|---|---|---|---|---|
-| TF-IDF + LogReg baseline | 55.6% | 75.8% | 33% (4/12) | 42.2% | 62.2% |
-| Translate-first (NLLB-200 for Tamil script, then baseline) | 60.0% | 81.8% | 50% (6/12) | 44.4% | 60.0% |
+| TF-IDF + LogReg (original data) | 55.6% | 75.8% | 33% | 42.2% | 62.2% |
+| Translate-first (NLLB-200 for Tamil script, then classifier) | 60.0% (27/45) | 81.8% (27/33) | 50% (6/12) | 44.4% | 60.0% |
+| MuRIL fine-tune | 49% (22/45) | 67% (22/33) | 50% (6/12) | 44% | 60% |
 
-Key findings:
-- Synthetic validation is ~100% because the text is templated; on hand-written complaints department accuracy drops to ~56%. Only the hand-written numbers are meaningful.
-- Tamil script is the weakest input. Translating to English first lifted it from 4/12 to 6/12 correct. The sample is small, so this is suggestive, not proven.
-- 12 of the 45 complaints belong to departments absent from the training data (revenue, police, education, food and civil supplies, parks). Without a safeguard these are confidently misrouted.
+Translating Tamil first helped Tamil (4/12 to 6/12). MuRIL did not beat the simple baseline. Its confidence never exceeded 0.3 on any test complaint, so it could not be used with the triage threshold; it is probably undertrained on small, templated data.
 
-### Confidence threshold and human triage (baseline, department)
+### Confidence threshold and human triage (current model, department)
 
-| threshold | auto-routed | misrouted | sent to human triage |
-|---|---|---|---|
-| 0.0 | 45 | 20 | 0 |
-| 0.5 | 22 | 4 | 23 |
-| 0.6 | 16 | 0 | 29 |
-| 0.8 | 8 | 0 | 37 |
+| threshold | auto-routed | correct | misrouted | sent to triage | accuracy on auto-routed |
+|---|---|---|---|---|---|
+| 0.0 | 45 | 34 | 11 | 0 | 76% |
+| 0.3 | 29 | 26 | 3 | 16 | 90% |
+| 0.4 | 26 | 24 | 2 | 19 | 92% |
+| **0.5 (used in the app)** | 24 | 22 | 2 | 21 | 92% |
+| 0.6 | 19 | 19 | 0 | 26 | 100% |
+| 0.7 | 12 | 12 | 0 | 33 | 100% |
+| 0.8 | 6 | 6 | 0 | 39 | 100% |
 
-The demo auto-routes at confidence >= 0.5 and sends the rest to a human triage queue with a clarifying question in the user's language. This operating point was chosen by looking at the same 45 rows, so treat it as illustrative, not tuned.
+The app uses 0.5 as an operating point (it automates about half the complaints and sends the shaky ones to a human). It was chosen by looking at this same sweep, so treat it as illustrative.
+
+### Other checks
+- 20 hand-written seed complaints: department 20/20, severity 16/20, urgency 18/20.
+- Safety override, measured on the first model: severity 42.2% to 44.4%, urgency 62.2% to 64.4% (6 complaints flagged). The keywords were chosen knowing the test complaints, so this is a design choice, not independent evidence.
+- Smoke tests: `python -m tests.smoke_test` (3 tests).
 
 ## Limitations
-- The test set is small (n=45); one row is about 2.2 percentage points.
-- Severity and urgency are subjective labels and are the hardest targets (42-62%).
-- Training data is synthetic; real citizen text is messier.
-- Translate-first covers Tamil script only; romanised Tanglish and Hinglish are not translated.
-- The ward matcher is evaluated separately (`python -m src.geo.eval_matcher`) but is not yet wired into the chat flow.
+- The test set is small (n=45); one complaint is about 2.2 percentage points, so differences of a few points are within noise.
+- The 45 complaints are no longer fully untouched: the department list and the wording of the training data were adjusted after seeing which test complaints failed. A fresh held-out set is future work.
+- Severity and urgency are subjective labels and are the hardest targets (47% and 67%).
+- Training data is synthetic and templated; real citizen text is messier.
+- Tamil script is the weakest input (58%). Translate-first covers Tamil script only.
+- Hindi in Devanagari script is recognised for greetings and replies, but the classifier is trained and evaluated on romanised Hindi (Hinglish) only.
+- The ward matcher (`src/geo`) is evaluated separately and is not wired into the chat flow.
 
+## Run it
+1. `git clone https://github.com/LOSITHA/citizen-grievance-bot.git` and `cd citizen-grievance-bot`
+2. `python -m venv .venv`, activate it, then `pip install -r requirements.txt`
+3. `python -m src.app.ui` and open http://127.0.0.1:7860
+4. Optional: set `SLA_SCALE` to a small number (for example `0.001`) before launching to see SLA escalation in seconds.
+5. Checks: `python -m tests.smoke_test`
 
-## Run the demo
-1. `python -m venv .venv`, activate it, then `pip install -r requirements.txt`
-2. `python -m src.app.ui` and open http://127.0.0.1:7860
-3. Citizen chat: type a complaint in English, Tamil, Tanglish or Hinglish. Send `status GRV-000001` to track a ticket.
-4. Officer console: update ticket status, or click "Escalate overdue (SLA)".
-5. Optional: set `SLA_SCALE` to a small number (for example `0.001`) to see SLA escalation in seconds.
-6. Run the checks with `python -m tests.smoke_test`.
+The trained model is committed (`models/baseline.joblib`). Tickets are stored in `data/tracker.db`, created on first run.
 
-## What is different about this system
-- Confidence-based human triage: low-confidence complaints become "Needs Triage" tickets and the bot asks a clarifying question in the user's language.
-- Duplicate linking: similar open complaints in the same department are linked to a parent ticket, so officers can see hotspots.
-- Explainable routing: each ticket stores the text features that drove its department.
-- SLA timers and auto-escalation based on severity and urgency.
-- Safety-keyword override: life-risk wording (live wire, open manhole, dog bite, ambulance delay) forces at least high severity and immediate urgency. This is a design choice and is not independently validated.
-- Code-mixed input (Tanglish, Hinglish) is handled directly.
+## Demo walkthrough
+Greet the bot, then file a Tanglish complaint and a Tamil complaint (each gets a ticket card), repeat the first complaint with a small change to see duplicate linking, send a complaint with life-risk wording to see the safety override, send a complaint for one of the newly added departments, then send a vague complaint to see the clarifying question. Check a ticket by typing its number, then use the Track tab. In the Officer console, update tickets with a message to the citizen, check the Track tab again, then escalate overdue tickets. Ready-made inputs are in `docs/demo_inputs.txt`.
+
+## Repository layout
+- `src/geo/` ward matching
+- `src/data/` test-set builder (`build_indep.py`) and extra training data generator (`gen_extra.py`)
+- `src/nlp/` baseline, evaluation, MuRIL, translate-first, threshold sweep, comparison
+- `src/app/` pipeline, ticket tracker, views, Gradio UI, demo-input picker
+- `tests/` smoke tests
+- `data/processed/` datasets (`synth_v2.jsonl` is the training data, `indep_test.jsonl` the independent test set)
+- `docs/` result tables and demo inputs
+
+## Reproduce the experiments
+- Training data: `python src/data/gen_extra.py`
+- Test set: `python src/data/build_indep.py`
+- Baseline: `python -m src.nlp.baseline`, then `python -m src.nlp.eval_baseline_indep`
+- Threshold sweep: `python -m src.nlp.fallback`
+- System comparison: `python -m src.nlp.compare`
+- Safety override: `python -m src.nlp.safety_eval`
+- MuRIL and translate-first need a GPU or Colab: `python -m src.nlp.train_muril`, `python -m src.nlp.translate_first`
+
+## AI assistance
+Built with help from Claude (Anthropic) for code and design discussion. The 45-complaint test set and its labels were written by the author. See `docs/ai_tools_used.md`.
+
+## Future work
+- Write a fresh held-out test set after freezing the system, for one unbiased number.
+- Re-run MuRIL and translate-first on the larger training data, and train MuRIL longer.
+- Calibrate the confidence scores before choosing the triage threshold.
+- Wire the ward matcher into the chat flow for ward-aware duplicates and hotspot counts.
+- Add Devanagari Hindi training data.

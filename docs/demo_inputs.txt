@@ -1,0 +1,43 @@
+Threshold in use: 0.5. Correct AND auto-routed: 30 of 53 candidates.
+
+## 1. Tanglish complaint
+[C29] (ta_rom) routes to transport, confidence 0.96
+Bus driver stop la niruthama poitaaru. Daily idhe problem dhaan, students romba kashtapadrom.
+[C32] (ta_rom) routes to revenue, confidence 0.85
+Government office la certificate apply panni romba naal aachu. Innum status update eh illa.
+
+## 2. Tamil-script complaint
+[C13] (ta) routes to water_supply, confidence 0.88
+எங்கள் பகுதியில் கடந்த மூன்று நாட்களாக குடிநீர் வரவில்லை. அதிகாரிகளிடம் புகார் கொடுத்தும் எந்த நடவடிக்கையும் எடுக்கவில்லை.
+[C18] (ta) routes to food_civil_supplies, confidence 0.74
+ரேஷன் கடையில் இந்த மாதம் அரிசி தர மறுக்கிறார்கள். என்னுடைய அட்டையில் எந்த பிரச்சனையும் இல்லை.
+
+## 3. Hinglish complaint
+[C36] (hi_rom) routes to water_supply, confidence 0.90
+Hamare area mein teen din se paani nahi aa raha hai. Tanker bhi abhi tak nahi bheja gaya.
+[C37] (hi_rom) routes to roads, confidence 0.74 SAFETY
+Sadak par bahut bade gaddhe hain. Kal ek bike wala gir gaya tha aur use chot bhi lagi.
+
+## 4. English complaint
+[C08] (en) routes to food_civil_supplies, confidence 0.85
+My ration card details are incorrect, and the shopkeeper refuses to provide my monthly provisions.
+[C09] (en) routes to electricity, confidence 0.80 SAFETY
+An exposed electrical wire is hanging dangerously low near a crowded bus stop. Someone could get electrocuted.
+
+## 5. Life-risk wording (safety override)
+[C09] (en) routes to electricity, confidence 0.80 SAFETY
+An exposed electrical wire is hanging dangerously low near a crowded bus stop. Someone could get electrocuted.
+[C37] (hi_rom) routes to roads, confidence 0.74 SAFETY
+Sadak par bahut bade gaddhe hain. Kal ek bike wala gir gaya tha aur use chot bhi lagi.
+
+## 6. A newly added department
+[X3] (en) routes to education, confidence 0.99 [my own sentence]
+The government school has no maths teacher and exams are near
+[X7] (hi_rom) routes to education, confidence 0.98 [my own sentence]
+School mein maths ke teacher nahi hain aur exam paas hain
+
+## 7. Vague complaint (goes to human triage)
+[C24] (ta) routes to transport, confidence 0.32
+இங்கே ஏதோ சரியாக இல்லை. பல நாட்களாக மக்கள் சிரமப்படுகிறார்கள், ஆனால் யாரும் வந்து பார்க்கவில்லை.
+[C34] (ta_rom) routes to electricity, confidence 0.15
+Inga edho issue irukku. Nethu lendhu same problem, yaar kitayum solli use illa.

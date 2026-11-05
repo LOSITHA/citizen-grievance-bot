@@ -1,4 +1,4 @@
-import re
+﻿import re
 import joblib
 from src.app import tracker
 
@@ -75,5 +75,6 @@ def handle(text):
     tpl = CLARIFY if dept == "Unclassified" else REPLY
     return {"ticket": tid, "lang": lang, "dept": dept, "severity": out["severity"], "urgency": out["urgency"],
             "confidence": round(conf["dept"], 2), "why": why, "parent": parent, "reply": tpl[lang].format(id=tid, dept=pretty(dept))}
+
 
 
