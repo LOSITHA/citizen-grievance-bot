@@ -26,8 +26,9 @@ CLARIFY = {
     "hi": "मुझे समझ नहीं आया कि समस्या क्या है। कहाँ और क्या दिक्कत है, कृपया बताएँ। (टिकट {id})",
 }
 
+NICE = {"food_civil_supplies": "Food and Civil Supplies", "sewerage_drainage": "Sewerage and Drainage", "solid_waste": "Solid Waste", "animal_control": "Animal Control", "street_lights": "Street Lights"}
 def pretty(d):
-    return d.replace("_", " ").title()
+    return NICE.get(d, d.replace("_", " ").title())
 
 RANK = ["low", "medium", "high", "critical"]
 SAFETY_TOKENS = {"spark", "sparks", "smoke", "electrocuted", "electrocute", "manhole", "bite", "bitten", "fire",
