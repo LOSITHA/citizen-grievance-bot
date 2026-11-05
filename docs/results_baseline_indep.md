@@ -2,13 +2,13 @@
 
 | target | acc (all rows) | acc (gold label exists in training labels) | macro-F1 |
 |---|---|---|---|
-| dept | 71.1% (32/45) | 76.2% (32/42) | 0.654 |
-| severity | 48.9% (22/45) | 48.9% (22/45) | 0.539 |
-| urgency | 68.9% (31/45) | 68.9% (31/45) | 0.626 |
+| dept | 75.6% (34/45) | 81.0% (34/42) | 0.693 |
+| severity | 46.7% (21/45) | 46.7% (21/45) | 0.526 |
+| urgency | 66.7% (30/45) | 66.7% (30/45) | 0.604 |
 
 | lang | n | dept correct | dept acc |
 |---|---|---|---|
-| en | 12 | 9 | 75% |
+| en | 12 | 11 | 92% |
 | hi_rom | 10 | 8 | 80% |
 | ta | 12 | 7 | 58% |
 | ta_rom | 11 | 8 | 73% |
@@ -18,7 +18,7 @@
 | id | target | gold | predicted | text |
 |---|---|---|---|---|
 | C02 | severity | medium | high | The garbage collection vehicle has not visited our area for  |
-| C03 | dept | roads | animal_control | A large pothole has developed near the main junction. Two-wh |
+| C05 | severity | medium | low | Someone is dumping construction waste on the empty plot besi |
 | C06 | severity | high | medium | There is a strong sewage smell coming from the drainage line |
 | C07 | dept | public_health | police | A government hospital has been turning away patients because |
 | C07 | severity | high | medium | A government hospital has been turning away patients because |
@@ -26,11 +26,10 @@
 | C10 | severity | medium | low | Buses on our route are frequently cancelled without any prio |
 | C10 | urgency | soon | routine | Buses on our route are frequently cancelled without any prio |
 | C11 | severity | low | medium | I have been trying to get my property tax receipt corrected, |
-| C12 | dept | parks | police | There is something wrong with the public park near our stree |
 | C12 | severity | low | high | There is something wrong with the public park near our stree |
 | C12 | urgency | routine | soon | There is something wrong with the public park near our stree |
-| C14 | dept | solid_waste | police | தெருவில் குப்பைகள் அள்ளப்படாமல் குவிந்து கிடக்கின்றன. இதனால் |
-| C15 | dept | roads | police | எங்கள் தெருவில் உள்ள சாலை முழுவதும் சேதமடைந்துள்ளது. வாகனங்க |
+| C14 | dept | solid_waste | education | தெருவில் குப்பைகள் அள்ளப்படாமல் குவிந்து கிடக்கின்றன. இதனால் |
+| C15 | dept | roads | encroachment | எங்கள் தெருவில் உள்ள சாலை முழுவதும் சேதமடைந்துள்ளது. வாகனங்க |
 | C16 | dept | electricity / street_lights | police | இரவு நேரத்தில் தெருவிளக்குகள் எரிவதில்லை. பெண்களும் குழந்தைக |
 | C16 | severity | high | medium | இரவு நேரத்தில் தெருவிளக்குகள் எரிவதில்லை. பெண்களும் குழந்தைக |
 | C17 | severity | high | medium | குடியிருப்பு பகுதியில் கழிவுநீர் கால்வாய் அடைத்துவிட்டது. து |
@@ -62,8 +61,9 @@
 | C34 | urgency | routine | soon | Inga edho issue irukku. Nethu lendhu same problem, yaar kita |
 | C35 | dept | solid_waste / solid_waste | water_supply | Public toilet romba dirty ah irukku. Water um illa, cleaning |
 | C35 | severity | medium | high | Public toilet romba dirty ah irukku. Water um illa, cleaning |
+| C35 | urgency | soon | immediate | Public toilet romba dirty ah irukku. Water um illa, cleaning |
 | C38 | severity | medium | high | Mohalle mein kachra roz jama hota ja raha hai. Safai karamch |
 | C40 | dept | public_health | electricity | Sarkari hospital mein dawa available nahi hai. Patients ko b |
-| C45 | dept | Unclassified | police | Pata nahi kya problem hai, lekin hamare yahan sab kuch pehle |
+| C45 | dept | Unclassified | electricity | Pata nahi kya problem hai, lekin hamare yahan sab kuch pehle |
 | C45 | severity | low | medium | Pata nahi kya problem hai, lekin hamare yahan sab kuch pehle |
 | C45 | urgency | routine | soon | Pata nahi kya problem hai, lekin hamare yahan sab kuch pehle |

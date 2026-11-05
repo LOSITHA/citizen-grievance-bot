@@ -1,4 +1,4 @@
-﻿"""Generate extra training rows for departments missing from synth.jsonl, then write synth_v2.jsonl.
+"""Generate extra training rows for departments missing from synth.jsonl, then write synth_v2.jsonl.
     python src/data/gen_extra.py
 """
 import json, random, collections
@@ -138,7 +138,7 @@ PHRASES = {
              ("park ka walking track tuta hua hai, log gir rahe hain", "medium", "routine"),
              ("park ke andar log kachra phenk rahe hain aur sharaab pi rahe hain", "medium", "soon")]},
  "animal_control": {
-  "en": [("stray dogs chase two-wheelers and children on our street every evening", "high", "soon"),
+  "en": [("stray dogs chase people and children on our street every evening", "high", "soon"),
          ("a pack of dogs is aggressive near the school gate and parents are scared", "high", "soon"),
          ("a dead animal has been lying on the road for two days and nobody has removed it", "medium", "soon"),
          ("cattle roam on the main road and cause accidents", "high", "soon"),
@@ -188,6 +188,28 @@ for dept, bank in PHRASES.items():
 print("new rows per department:", dict(collections.Counter(r["dept"] for r in rows)))
 print("new rows per language:  ", dict(collections.Counter(r["lang"] for r in rows)))
 print("new rows per split:     ", dict(collections.Counter(r["split"] for r in rows)))
+
+# --- neutral-context augmentation of the ORIGINAL rows ---
+AUG_INTRO = {
+    "ta": ["எங்கள் தெருவில் ", "எங்கள் பகுதியில் ", "இரவு நேரத்தில் ", "கடந்த சில நாட்களாக ", "பலமுறை புகார் செய்தும் ", "அருகில் உள்ள இடத்தில் "],
+    "ta_rom": ["Enga street la ", "Enga area la ", "Raathri neram ", "Konja naala ah ", "Palamurai sonnaalum "],
+    "hi_rom": ["Hamari gali mein ", "Hamare area mein ", "Raat ko ", "Kuch dino se ", "Kai baar bolne par bhi "],
+    "en": ["In our street, ", "At night, ", "For the last few days, ", "Near our house, ", "Despite repeated complaints, "],
+}
+old_rows = [json.loads(l) for l in open(SRC, encoding="utf-8-sig") if l.strip()]
+pool = [r for r in old_rows if r["lang"] in AUG_INTRO]
+random.shuffle(pool)
+chosen = [r for r in pool if r["lang"] == "ta"][:700] + [r for r in pool if r["lang"] != "ta"][:700]
+aug = 0
+for r in chosen:
+    intro = random.choice(AUG_INTRO[r["lang"]])
+    body = r["text"] if r["lang"] == "ta" else r["text"][0].lower() + r["text"][1:]
+    text = intro + body
+    if text in seen: continue
+    seen.add(text); aug += 1
+    c = dict(r); c["id"] = f"a{aug:05d}"; c["text"] = text; c["source"] = "synthetic_v2_aug"
+    rows.append(c)
+print("augmented original rows:", aug, dict(collections.Counter(c["lang"] for c in rows if c["source"] == "synthetic_v2_aug")))
 
 indep = [json.loads(l)["text"] for l in open("data/processed/indep_test.jsonl", encoding="utf-8-sig") if l.strip()]
 vec = TfidfVectorizer(analyzer="char_wb", ngram_range=(3, 5), sublinear_tf=True).fit([r["text"] for r in rows] + indep)
