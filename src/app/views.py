@@ -1,4 +1,4 @@
-﻿import html, time
+import html, time
 from src.app import tracker
 
 STEPS = ["Registered", "Sent to department", "In progress", "Resolved"]
@@ -11,7 +11,8 @@ WAITING = ("Received", "Routed", "Needs Triage")
 OPEN = ("Received", "Routed", "Needs Triage", "In Progress")
 
 def esc(x): return html.escape(str(x))
-def pretty(d): return d.replace("_", " ").title()
+NICE = {"food_civil_supplies": "Food and Civil Supplies", "sewerage_drainage": "Sewerage and Drainage", "solid_waste": "Solid Waste", "animal_control": "Animal Control", "street_lights": "Street Lights"}
+def pretty(d): return NICE.get(d, d.replace("_", " ").title())
 def short(d): return "Not assigned" if d == "Unclassified" else pretty(d)
 def dept_label(d): return "Not assigned yet (an officer will review it)" if d == "Unclassified" else pretty(d)
 def fmt(ts): return time.strftime("%a %d %b, %I:%M %p", time.localtime(ts))
