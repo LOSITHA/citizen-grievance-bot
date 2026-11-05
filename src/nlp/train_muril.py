@@ -1,4 +1,4 @@
-﻿"""Multi-task MuRIL fine-tune (dept / severity / urgency). Run in Colab:  python -m src.nlp.train_muril"""
+"""Multi-task MuRIL fine-tune (dept / severity / urgency). Run in Colab:  python -m src.nlp.train_muril"""
 import time, random
 import numpy as np, torch
 from torch import nn
@@ -10,7 +10,7 @@ MODEL, EPOCHS, BS, LR, MAXLEN, SEED = "google/muril-base-cased", 4, 32, 3e-5, 96
 random.seed(SEED); np.random.seed(SEED); torch.manual_seed(SEED)
 dev = "cuda" if torch.cuda.is_available() else "cpu"
 
-synth = load("data/processed/synth.jsonl")
+synth = load("data/processed/synth_v2.jsonl")
 train = [r for r in synth if r["split"] == "train"]
 val = [r for r in synth if r["split"] == "val"]
 seeds, indep, known = load("data/processed/seed_test.jsonl"), load("data/processed/indep_test.jsonl"), known_labels()

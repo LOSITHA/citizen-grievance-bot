@@ -1,4 +1,4 @@
-﻿import json
+import json
 from collections import defaultdict
 from sklearn.metrics import f1_score
 
@@ -7,7 +7,7 @@ TARGETS = ["dept", "severity", "urgency"]
 def load(path):
     return [json.loads(l) for l in open(path, encoding="utf-8-sig") if l.strip()]
 
-def known_labels(path="data/processed/synth.jsonl"):
+def known_labels(path="data/processed/synth_v2.jsonl"):
     k = {t: set() for t in TARGETS}
     for r in load(path):
         for t in TARGETS: k[t].add(r[t])

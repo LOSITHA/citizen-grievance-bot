@@ -1,6 +1,6 @@
 # Baseline: TF-IDF (char 2-5 + word 1-2) + logistic regression
 
-train n=3370 (synthetic) | synthetic val n=630 | hand-written test n=20
+train n=4889 (synthetic) | synthetic val n=911 | hand-written test n=20
 
 | target | synthetic val acc | synthetic val macro-F1 | TEST acc | TEST macro-F1 |
 |---|---|---|---|---|

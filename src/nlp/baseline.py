@@ -1,4 +1,4 @@
-﻿"""TF-IDF + logistic regression baseline for department, severity and urgency.
+"""TF-IDF + logistic regression baseline for department, severity and urgency.
 
 Train on synthetic 'train', report on synthetic 'val' (sanity only) and on the hand-written seed set (the real test).
     python -m src.nlp.baseline
@@ -12,7 +12,7 @@ from sklearn.metrics import accuracy_score, f1_score
 from sklearn.pipeline import make_pipeline, make_union
 
 TARGETS = ["dept", "severity", "urgency"]
-SYNTH, TEST = "data/processed/synth.jsonl", "data/processed/seed_test.jsonl"
+SYNTH, TEST = "data/processed/synth_v2.jsonl", "data/processed/seed_test.jsonl"
 
 def load(path):
     return [json.loads(l) for l in open(path, encoding="utf-8-sig")]

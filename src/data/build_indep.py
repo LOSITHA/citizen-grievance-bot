@@ -1,7 +1,7 @@
-﻿"""Build indep_test.jsonl from the 45 hand-written complaints (embedded below).  python src/data/build_indep.py"""
+"""Build indep_test.jsonl from the 45 hand-written complaints (embedded below).  python src/data/build_indep.py"""
 import json, re
 
-OUT, SYNTH = "data/processed/indep_test.jsonl", "data/processed/synth.jsonl"
+OUT, SYNTH = "data/processed/indep_test.jsonl", "data/processed/synth_v2.jsonl"
 
 DATA = """
 C01|There has been no water supply in our street since yesterday morning. Several families are struggling to manage their daily activities.|Water Supply|High|Soon
@@ -53,6 +53,7 @@ C45|Pata nahi kya problem hai, lekin hamare yahan sab kuch pehle se zyada kharab
 
 EXTRA_OK = {"C04": ["street_lights"], "C16": ["street_lights"]}   # streetlight complaints you labelled Electricity
 CANDS = {
+    "animal_welfare": ["animal_control"],
     "roads_highways": ["roads"], "public_transport": ["transport"], "electricity_board": ["electricity"],
     "sanitation": ["sanitation", "solid_waste", "garbage", "waste_management"],
     "public_toilets": ["sanitation", "solid_waste", "public_toilets"],
