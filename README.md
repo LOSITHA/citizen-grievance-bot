@@ -106,9 +106,6 @@ The app uses 0.5 as an operating point (it automates about half the complaints a
 
 The trained model is committed (`models/baseline.joblib`). Tickets are stored in `data/tracker.db`, created on first run.
 
-## Demo walkthrough
-Greet the bot, then file a Tanglish complaint and a Tamil complaint (each gets a ticket card), repeat the first complaint with a small change to see duplicate linking, send a complaint with life-risk wording to see the safety override, send a complaint for one of the newly added departments, then send a vague complaint to see the clarifying question. Check a ticket by typing its number, then use the Track tab. In the Officer console, update tickets with a message to the citizen, check the Track tab again, then escalate overdue tickets. Ready-made inputs are in `docs/demo_inputs.txt`.
-
 ## Repository layout
 - `src/geo/` ward matching
 - `src/data/` test-set builder (`build_indep.py`) and extra training data generator (`gen_extra.py`)
